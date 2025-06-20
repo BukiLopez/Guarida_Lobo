@@ -1,7 +1,38 @@
 .menu-bar {
   background-color: #d65b5b;
-  padding: 10px;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 0;
+}
+
+.menu-bar select {
+  background-color: #e88787;
+  border: 2px solid black;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 8px 15px;
+  border-radius: 0;
+  height: auto;
+}
+
+.menu-bar select:not(:first-child) {
+  border-left: none;
+}
+
+.menu-bar select::-ms-expand {
+  display: none;
+}
+
+.menu-bar select:hover {
+  background-color: #d65b5b;
+  border-color: black;
+}
+
+.menu-bar select:focus {
+  outline: none;
 }
