@@ -13,52 +13,9 @@
 
 .footer-column p {
   margin: 3px 0;
-  cursor: pointer;
-}
-
-.footer-column p:hover {
-  text-decoration: underline;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
 }
 
 .social-icons span {
-  font-size: 3rem;
-  transition: transform 0.2s, color 0.2s;
-  cursor: pointer;
-}
-
-.social-icons span:hover {
-  transform: scale(1.2);
-}
-
-.whatsapp {
-  color: #25d366;
-}
-
-.whatsapp:hover {
-  color: #128c7e;
-}
-
-.tiktok {
-  color: white;
-}
-
-.tiktok:hover {
-  color: rgb(109, 233, 255)
-}
-
-.instagram {
-  color: rgb(255, 25, 152)
-}
-
-.instagram:hover {
-  color: rgb(169, 0, 236)
+  margin-right: 10px;
+  font-size: 1.5rem;
 }

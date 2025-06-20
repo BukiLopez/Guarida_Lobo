@@ -1,44 +1,7 @@
-/* Estilo general del contenedor */
 .menu-bar {
-  background-color: #d65b5b; /* Fondo rojo */
-  display: flex; /* Flexbox para alinear horizontalmente */
-  justify-content: center; /* Centra los selectores horizontalmente */
-  gap: 0; /* Sin espacio entre selectores */
-}
-
-/* Estilo de los selectores */
-.menu-bar select {
-  background-color: #e88787; /* Fondo rojo claro */
-  border: 2px solid black; /* Borde más grueso */
-  font-size: 1rem; /* Tamaño del texto */
-  color: black; /* Color del texto */
-  cursor: pointer; /* Muestra el cursor de pointer */
-  appearance: none; /* Elimina el estilo predeterminado del navegador */
-  text-align: center; /* Centra el texto horizontalmente */
-  text-transform: uppercase; /* Convierte el texto a mayúsculas */
-  margin: 0; /* Sin margen externo */
-  padding: 8px 15px; /* Espaciado interno adicional */
-  border-radius: 0; /* Sin bordes redondeados */
-  height: auto; /* Permite ajustar la altura según el padding */
-}
-
-/* Ajuste para eliminar bordes entre los select */
-.menu-bar select:not(:first-child) {
-  border-left: none; /* Elimina el borde izquierdo de los selectores siguientes */
-}
-
-/* Icono de flecha personalizado */
-.menu-bar select::-ms-expand {
-  display: none; /* Oculta el ícono predeterminado en IE/Edge */
-}
-
-/* Hover effect */
-.menu-bar select:hover {
-  background-color: #d65b5b; /* Fondo más oscuro al pasar el cursor */
-  border-color: black; /* Asegura que el borde permanezca visible */
-}
-
-/* Focus effect */
-.menu-bar select:focus {
-  outline: none; /* Elimina el contorno predeterminado */
+  background-color: #d65b5b;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }

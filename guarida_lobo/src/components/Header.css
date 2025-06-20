@@ -1,35 +1,18 @@
-/* General header styles */
 .header {
-  background-color: #8b0000; /* Rojo oscuro */
+  background-color: #8b0000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 30px;
+  padding: 15px 30px;
   color: white;
   font-family: 'Orbitron', sans-serif;
 }
 
-/* Logo styles */
 .logo {
-  text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  line-height: 1;
-  text-shadow: 2px 2px 5px black;
 }
 
-.logo-line1 {
-  display: block;
-  font-size: 1.7rem;
-}
-
-.logo-line2 {
-  display: block;
-  font-size: 1.5rem;
-  color: #ffd700;
-}
-
-/* Navbar styles */
 .navbar a {
   margin: 0 15px;
   color: white;
@@ -37,71 +20,16 @@
   font-weight: 500;
 }
 
-/* Search bar styles */
-.search-bar {
-  display: flex;
-  align-items: center;
-  border: 2px solid black; /* Negro sólido */
-  background-color: #4b0000; /* Fondo rojo más oscuro */
-  padding: 5px;
-  border-radius: 5px;
-  width: 300px; /* Ancho fijo */
-}
-
 .search-bar input {
-  border: none;
-  background-color: transparent;
-  color: #bdbdbd; /* Placeholder gris claro */
-  font-size: 1rem;
-  flex-grow: 1;
   padding: 5px;
-  outline: none;
 }
 
-.search-bar input::placeholder {
-  color: #bdbdbd;
+.search-bar button {
+  padding: 6px;
+  margin-left: 5px;
 }
 
-.search-button {
-  display: flex; /* Activa flexbox */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  border: none;
-  background: none;
-  color: white; /* Cambia el color del ícono */
-  font-size: 1.5rem; /* Tamaño del ícono */
-  cursor: pointer;
-  padding: 0; /* Elimina el padding interno */
-  width: 30px; /* Ancho del botón */
-  height: 30px; /* Alto del botón, igual al ancho */
-}
-
-/* Icons container */
-.icons {
-  display: flex; /* Activa flexbox */
-  justify-content: flex-end; /* Alinea horizontalmente los íconos a la derecha */
-  align-items: center; /* Centra verticalmente los íconos */
-  gap: 10px; /* Espaciado entre los íconos */
-}
-
-/* Icons styles */
 .icons span {
-  display: flex; /* Activa flexbox para centrar el contenido dentro del círculo */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  width: 40px; /* Tamaño del círculo */
-  height: 40px; /* Tamaño del círculo */
-  background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con opacidad */
-  border: 2px solid black; /* Borde negro */
-  border-radius: 50%; /* Hace que sea un círculo */
-  color: black; /* Color del ícono negro */
-  font-size: 1.5rem; /* Tamaño del ícono */
-  cursor: pointer; /* Indica que es clickeable */
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-/* Hover effect */
-.icons span:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
-  background-color: rgba(255, 255, 255, 0.7); /* Fondo más opaco */
+  margin-left: 15px;
+  font-size: 1.4rem;
 }
