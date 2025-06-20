@@ -1,0 +1,7 @@
+.menu-bar {
+  background-color: #d65b5b;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}

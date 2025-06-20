@@ -1,0 +1,8 @@
+.comic-panel {
+  border: 2px solid black;
+  margin: 20px auto;
+  width: 90%;
+  height: 220px;
+  background-color: #ccc;
+  border-radius: 10px;
+}
