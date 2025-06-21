@@ -1,0 +1,108 @@
+/* -------------------------------------- */
+/*             VISTA EN FILA             */
+/* -------------------------------------- */
+.comic-card.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.comic-card.row .comic-image {
+  width: 180px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.comic-card.row .comic-main-content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.comic-card.row .comic-details {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comic-card.row .comic-title {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.comic-card.row .comic-price {
+  color: crimson;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.comic-card.row .comic-description {
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+.comic-card.row .comic-related-column {
+  flex: 1;
+  min-width: 150px;
+  max-width: none;
+}
+
+/* -------------------------------------- */
+/*          VISTA EN CUADRÍCULA          */
+/* -------------------------------------- */
+.comic-card.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.comic-card.grid .comic-image {
+  width: 180px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.comic-card.grid .comic-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.comic-card.grid .comic-title {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.comic-card.grid .comic-price {
+  color: crimson;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.comic-card.grid .comic-description {
+  background-color: #eee;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
