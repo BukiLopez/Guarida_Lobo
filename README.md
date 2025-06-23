@@ -10,6 +10,7 @@ Antes de comenzar, asegúrate de tener instalados:
 
 - [Node.js](https://nodejs.org/) (versión recomendada: LTS 18+)
 - npm (se instala junto con Node)
+- GIT
 
 Verifica las versiones con:
 
