@@ -1,8 +1,23 @@
 .app {
   font-family: 'Orbitron', sans-serif;
-  background-color: #fffaf7;
+  background-image: url('../src/Images/Centro\ cocotero.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-content {
   padding: 20px 0;
+}
+
+.main-content button {
+  background-color: crimson;
+}
+
+body {
+
+  background-size: cover; /* cubre toda la pantalla */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* hace que el fondo no se mueva al hacer scroll */
+  background-position: center;
 }

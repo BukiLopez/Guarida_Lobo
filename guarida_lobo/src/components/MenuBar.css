@@ -1,12 +1,12 @@
 .menu-bar {
-  background-color: #d65b5b;
+  background-color: #d45bd6;
   display: flex;
   justify-content: center;
   gap: 0;
 }
 
 .menu-bar select {
-  background-color: #e88787;
+  background-color: #e887ce;
   border: 2px solid black;
   font-size: 1rem;
   color: black;
