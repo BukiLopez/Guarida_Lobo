@@ -1,6 +1,6 @@
 .app {
   font-family: 'Orbitron', sans-serif;
-  background-image: url('../src/Images/Centro\ cocotero.jpeg');
+  background-image: url('../public/Images/dots.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
