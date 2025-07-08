@@ -16,7 +16,7 @@
 }
 
 .main-content button {
-  background-color: crimson;
+  background-color: purple;
 }
 
 body {
@@ -32,10 +32,10 @@ body {
   align-items: center;
   gap: 2px;
   margin: auto;
-  border: 2px solid crimson;
+  border: 2px solid purple;
   border-radius: 6px;
   overflow: hidden;
-  background-color: crimson; /* fondo base del switch */
+  background-color: purple; /* fondo base del switch */
   width: fit-content;
 }
 
@@ -54,7 +54,7 @@ body {
 
 .switch-icon.active {
   background-color: white;
-  color: crimson;
+  color: purple;
 }
 
 .switch-icon:hover:not(.active) {
