@@ -3,6 +3,7 @@ import Header from './components/Header';
 import MenuBar from './components/MenuBar';
 import ComicPanel from './components/ComicPanel';
 import Footer from './components/Footer';
+import { FaColumns, FaList } from "react-icons/fa";
 import './App.css';
 
 function App() {
@@ -15,9 +16,20 @@ function App() {
 
       <main className="main-content">
         {/* Botón para cambiar de modo */}
-        <div style={{ textAlign: 'center', margin: '20px' }}>
-          <button onClick={() => setViewMode(v => v === 'row' ? 'grid' : 'row')}>
-            Cambiar a vista {viewMode === 'row' ? 'cuadrícula' : 'por fila'}
+        <div className="view-switch">
+          <button
+            className={`switch-icon ${viewMode === 'row' ? 'active' : ''}`}
+            onClick={() => setViewMode('row')}
+            title="Vista por fila"
+          >
+            <FaList />
+          </button>
+          <button
+            className={`switch-icon ${viewMode === 'grid' ? 'active' : ''}`}
+            onClick={() => setViewMode('grid')}
+            title="Vista de cuadrícula"
+          >
+            <FaColumns />
           </button>
         </div>
 
