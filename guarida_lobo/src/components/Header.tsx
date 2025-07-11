@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { BsCart4 } from "react-icons/bs";
 import { GrUser } from "react-icons/gr";

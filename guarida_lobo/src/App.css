@@ -4,10 +4,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed; /* Fija la imagen de fondo al viewport */
 
-  display: flex;            /* convertir en flex container */
-  flex-direction: column;   /* organizar hijos en columna */
-  min-height: 100vh;        /* ocupar toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main-content {
