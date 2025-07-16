@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaWhatsappSquare, FaInstagramSquare } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 import './Footer.css';
