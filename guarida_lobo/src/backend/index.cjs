@@ -28,6 +28,25 @@ const id = req.params.id;
     res.send(result)
     });   });
 
+    // Ruta para buscar cómics por nombre (búsqueda parcial)
+app.get("/api/search", (req, res) => {
+  const search = `%${req.query.q}%`;
+  const sql = `
+    SELECT id, nombre, portada_url, descripcion, precio
+    FROM comics
+    WHERE nombre LIKE ?`;
+
+  db.query(sql, [search], (err, results) => {
+    if (err) {
+      console.error("Error al buscar cómics:", err);
+      res.status(500).send("Error en la búsqueda");
+      return;
+    }
+    res.json(results);
+  });
+});
+
+
 
 // Route to delete a post
 
