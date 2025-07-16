@@ -1,23 +1,63 @@
 .app {
   font-family: 'Orbitron', sans-serif;
-  background-image: url('../Images/dots.png');
+  background-image: url('../public/Images/dots.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed; /* Fija la imagen de fondo al viewport */
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main-content {
+  flex: 1;                  /* crecer para ocupar espacio disponible */
   padding: 20px 0;
 }
 
 .main-content button {
-  background-color: crimson;
+  background-color: purple;
 }
 
 body {
-
   background-size: cover; /* cubre toda la pantalla */
   background-repeat: no-repeat;
-  background-attachment: fixed; /* hace que el fondo no se mueva al hacer scroll */
+  background-attachment: fixed; /* fondo fijo al hacer scroll */
   background-position: center;
+}
+
+.view-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  margin: auto;
+  border: 2px solid purple;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: purple; /* fondo base del switch */
+  width: fit-content;
+}
+
+.switch-icon {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.switch-icon.active {
+  background-color: white;
+  color: purple;
+}
+
+.switch-icon:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.15);
 }
