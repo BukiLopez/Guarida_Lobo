@@ -38,6 +38,8 @@ cd backend
 npm install
 node index.cjs
 ```
+Esctructura
+```
 📦 Guarida_Lobo/
  ┣ 📂 db/                   # Archivo .sql
  ┣ 📂 src/                  # Código fuente del frontend
@@ -50,5 +52,5 @@ node index.cjs
  ┃ ┗ 📄 index.cjs           # Archivo principal del servidor
  ┣ 📄 package.json          # Configuración de dependencias del frontend
  ┗ 📄 README.md             # Documentación del proyecto
-
+```
 En caso de necesitar modificar las credenciales de la base de datos, estas se encuentran en backend/.env
