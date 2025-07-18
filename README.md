@@ -10,31 +10,45 @@ Antes de comenzar, asegúrate de tener instalados:
 
 - [Node.js](https://nodejs.org/) (versión recomendada: LTS 18+)
 - npm (se instala junto con Node)
-- GIT
+- [GIT](https://git-scm.com/) (versión recomendada: 2.34+)
+- Un entorno local como [XAMPP](https://www.apachefriends.org/es/index.html) o [MAMP](https://www.mamp.info/en/) para levantar la base de datos MySQL
 
 Verifica las versiones con:
 
 ```bash
 node -v
 npm -v
-
-[git clone https://github.com/BukiLopez/Guarida_Lobo.git
+git --version
+```
+Clonar proyecto
+```
+git clone https://github.com/BukiLopez/Guarida_Lobo.git
 cd Guarida_Lobo
-
 git checkout main
-
+```
+Inicio del servidor frontend
+```
+cd Guarida_Lobo
 npm install
-
 npm run dev
 ```
-## Estructura del proyecto
-```bash
-📦 src/
- ┣ 📂 components/           # Componentes reutilizables (Header, ComicPanel, RelatedComics, etc.)
- ┣ 📂 types/                # Interfaces de datos (Comic, etc.)
- ┣ 📄 App.tsx               # Componente principal
- ┣ 📄 main.tsx              # Punto de entrada del proyecto
- ┗ 📄 index.css             # Estilos base
+Inicio del servidor backend
 ```
+cd backend
+npm install
+node index.cjs
+```
+📦 Guarida_Lobo/
+ ┣ 📂 db/                   # Archivo .sql
+ ┣ 📂 src/                  # Código fuente del frontend
+ ┃ ┣ 📂 components/         # Componentes reutilizables (Header, ComicPanel, RelatedComics, etc.)
+ ┃ ┣ 📂 types/              # Interfaces de datos (Comic, etc.)
+ ┃ ┣ 📄 App.tsx             # Componente principal
+ ┃ ┣ 📄 main.tsx            # Punto de entrada del proyecto
+ ┃ ┗ 📄 index.css           # Estilos base
+ ┣ 📂 backend/              # API REST con Express y MySQL
+ ┃ ┗ 📄 index.cjs           # Archivo principal del servidor
+ ┣ 📄 package.json          # Configuración de dependencias del frontend
+ ┗ 📄 README.md             # Documentación del proyecto
 
----
+En caso de necesitar modificar las credenciales de la base de datos, estas se encuentran en backend/.env
