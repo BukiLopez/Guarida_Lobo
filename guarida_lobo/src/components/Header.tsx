@@ -5,6 +5,7 @@ import { GrUser } from "react-icons/gr";
 import axios from "axios";
 import './Header.css';
 import type { Comic } from "../types/Comic";
+import { useNavigate } from "react-router-dom";
 
 interface HeaderProps {
   onComicSelect: (comic: Comic) => void;
@@ -13,14 +14,14 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onComicSelect }) => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Comic[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       if (query.trim().length > 0) {
         axios
-          axios
-  .get<Comic[]>(`http://localhost:3001/api/search?q=${query}`)
-  .then((res) => setResults(res.data))
+          .get<Comic[]>(`http://localhost:3001/api/search?q=${query}`)
+          .then((res) => setResults(res.data))
           .catch((err) => console.error(err));
       } else {
         setResults([]);
@@ -34,6 +35,16 @@ const Header: React.FC<HeaderProps> = ({ onComicSelect }) => {
     onComicSelect(comic);
     setQuery("");
     setResults([]);
+  };
+
+  // Función para manejar el click en el icono usuario
+  const handleUserClick = () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/perfil");
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
@@ -69,10 +80,7 @@ const Header: React.FC<HeaderProps> = ({ onComicSelect }) => {
                 className="search-result-item"
                 onClick={() => handleSelect(comic)}
               >
-                <img
-                  src={comic.portada_url}
-                  alt={comic.nombre}
-                />
+                <img src={comic.portada_url} alt={comic.nombre} />
                 <span>{comic.nombre}</span>
               </div>
             ))}
@@ -81,8 +89,12 @@ const Header: React.FC<HeaderProps> = ({ onComicSelect }) => {
       </div>
 
       <div className="icons">
-        <span><BsCart4 /></span>
-        <span><GrUser /></span>
+        <span onClick={() => navigate("/carrito")} style={{ cursor: "pointer" }}>
+          <BsCart4 />
+        </span>
+        <span onClick={handleUserClick} style={{ cursor: "pointer" }}>
+          <GrUser />
+        </span>
       </div>
     </header>
   );
