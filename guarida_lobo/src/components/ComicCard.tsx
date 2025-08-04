@@ -10,24 +10,56 @@ interface ComicCardProps {
 const ComicCard: React.FC<ComicCardProps> = ({ comic, viewMode }) => {
   return (
     <div className={`comic-card ${viewMode}`}>
-        <div className="comic-image-column">
-            <img className="comic-image" src={comic.imageUrl} alt={comic.title} />
-        </div>
-
+      {viewMode === 'row' ? (
         <div className="comic-main-content">
+          {/* CONTENIDO SIEMPRE VISIBLE */}
+          <div className="comic-core">
+            <div className="comic-image-column">
+              <img
+                className="comic-image"
+                src={comic.imageUrl}
+                alt={comic.title}
+              />
+            </div>
             <div className="comic-details">
+              <h2 className="comic-title">{comic.title}</h2>
+              <p className="comic-price">${comic.price.toFixed(2)}</p>
+            </div>
+          </div>
+
+          {/* CONTENIDO EXPANDIBLE */}
+          <div className="comic-expandable-content">
+            <p className="comic-description">{comic.description}</p>
+            <div className="comic-related-column">
+              <RelatedComics related={comic.related} />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="comic-image-column">
+            <img
+              className="comic-image"
+              src={comic.imageUrl}
+              alt={comic.title}
+            />
+          </div>
+          <h2 className="comic-title">{comic.title}</h2>
+          <p className="comic-price">${comic.price.toFixed(2)}</p>
+
+          <div className="comic-overlay">
             <h2 className="comic-title">{comic.title}</h2>
             <p className="comic-price">${comic.price.toFixed(2)}</p>
             <p className="comic-description">{comic.description}</p>
-            </div>
-
             <div className="comic-related-column">
-            <RelatedComics related={comic.related} />
+              <RelatedComics related={comic.related} />
             </div>
-        </div>
+          </div>
+        </>
+      )}
     </div>
-
   );
 };
 
 export default ComicCard;
+

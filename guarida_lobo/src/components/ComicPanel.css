@@ -15,3 +15,33 @@
   width: 90%;
   margin: 0 auto;
 }
+
+.editorial-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.editorial-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.editorial-row::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.editorial-title {
+  position: sticky;
+  top: 0;
+  background-color: #1a1a1a00; /* mismo que tu fondo */
+  z-index: 5;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 1rem 0 0.5rem;
+}

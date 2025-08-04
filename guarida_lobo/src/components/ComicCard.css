@@ -2,14 +2,50 @@
 /*             VISTA EN FILA             */
 /* -------------------------------------- */
 .comic-card.row {
+  width: auto;
+  flex-grow: 0;
+  transition: transform 0.3s ease, max-width 0.3s ease;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-  gap: 20px;
   padding: 15px;
   border: 1px solid #85471b;
   border-radius: 10px;
   background-color: rgb(191, 114, 131);
   box-sizing: border-box;
+  max-width: 700px;
+  margin-left: 0;
+  margin-right: auto;
+  /*margin: 0 auto;*/
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  align-items: flex-start;
+}
+
+.comic-card.row:hover {
+  max-width: 1100px;
+  transform: scaleX(1.05);
+}
+
+.comic-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.comic-main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  /* Quitar esto ↓ */
+  /* width: 100%; */
+  flex: 0 1 auto;
+}
+
+
+.comic-details {
+  flex: 0 1 auto;
 }
 
 .comic-card.row .comic-image {
@@ -21,28 +57,32 @@
 
 .comic-card.row .comic-main-content {
   display: flex;
-  flex: 1;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
 
 .comic-card.row .comic-details {
-  flex: 1;
-  max-width: 300px;
+  flex: 0 1 auto;
+  max-width: 220px;
   display: flex;
   flex-direction: column;
 }
 
 .comic-card.row .comic-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
   margin: 0;
   font-weight: 600;
+  color: white;
 }
 
 .comic-card.row .comic-price {
+  font-size: 1rem;
   color: crimson;
   font-weight: bold;
   margin: 10px 0;
+  opacity: 0.8;
 }
 
 .comic-card.row .comic-description {
@@ -58,6 +98,56 @@
   max-width: none;
 }
 
+.comic-card.row .comic-hover-content-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  /*display: flex;*/
+  justify-content: space-between;
+  gap: 20px;
+  transition: opacity 0.3s ease-in-out;
+  transform: scale(1.01);
+  z-index: 10;
+}
+
+.comic-card.row:hover .comic-hover-content-row {
+  opacity: 1;
+}
+
+.comic-card.row .comic-hover-content-row .comic-description {
+  flex: 1;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.comic-card.row .comic-hover-content-row .comic-related-column {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.comic-card.row .comic-expandable-content {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 15px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.comic-card.row:hover .comic-expandable-content {
+  display: flex;
+}
+
 /* -------------------------------------- */
 /*          VISTA EN CUADRÍCULA          */
 /* -------------------------------------- */
@@ -71,6 +161,9 @@
   background-color: rgb(191, 114, 131);
   text-align: center;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
 .comic-card.grid .comic-image {
@@ -106,3 +199,47 @@
   border-radius: 4px;
   font-size: 0.95rem;
 }
+
+.comic-card.grid .comic-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  color: white;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.comic-card.grid:hover .comic-overlay {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.comic-card.grid .comic-overlay .comic-description {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.comic-card.grid .comic-overlay .comic-related-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.comic-card.grid .comic-image {
+  transition: transform 0.3s ease;
+}
+
+.comic-card.grid:hover .comic-image {
+  transform: scale(1.05);
+}
+
