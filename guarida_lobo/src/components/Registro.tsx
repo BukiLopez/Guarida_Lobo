@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Registro.css';
 
 export default function Registro() {
   const [nombre, setNombre] = useState('');

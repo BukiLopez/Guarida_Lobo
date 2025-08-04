@@ -1,0 +1,39 @@
+.comic-card {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #b94b69;
+  border-radius: 8px;
+  background-color: #ffe4ec;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comic-image {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.comic-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.comic-title {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.comic-price {
+  color: #b22222;
+  font-weight: bold;
+}
+
+.comic-description {
+  font-size: 0.9rem;
+  color: #444;
+}

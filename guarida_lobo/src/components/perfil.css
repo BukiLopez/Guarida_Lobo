@@ -1,0 +1,24 @@
+.perfil-container {
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.perfil-container h2 {
+  margin-bottom: 15px;
+}
+
+.perfil-container button {
+  background-color: #c22;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.perfil-container button:hover {
+  background-color: #a00;
+}

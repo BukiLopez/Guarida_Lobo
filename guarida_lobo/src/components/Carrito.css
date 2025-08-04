@@ -1,8 +1,15 @@
 .comic-panel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
   padding: 20px;
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
+
+.comic-panel p {
+  font-size: 1.1rem;
+  color: #333;
 }
