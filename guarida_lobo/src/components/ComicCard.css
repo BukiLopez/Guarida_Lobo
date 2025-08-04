@@ -6,9 +6,9 @@
   flex-direction: row;
   gap: 20px;
   padding: 15px;
-  border: 1px solid #aaa;
+  border: 1px solid #85471b;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgb(191, 114, 131);
   box-sizing: border-box;
 }
 
@@ -66,9 +66,9 @@
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  border: 1px solid #aaa;
+  border: 1px solid #85471b;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgb(191, 114, 131);
   text-align: center;
   box-sizing: border-box;
 }
