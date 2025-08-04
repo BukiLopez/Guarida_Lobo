@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Perfil.css'; // Asegúrate de importar tu CSS
 
 export default function Perfil() {
   const [user, setUser] = useState<any>(null);
@@ -31,9 +32,11 @@ export default function Perfil() {
   if (!user) return <p>Cargando perfil...</p>;
 
   return (
-    <div>
-      <h2>Bienvenido, {user.nombre}</h2>
-      <button onClick={handleLogout}>Cerrar sesión</button>
+    <div className="perfil-container">
+      <div className="perfil-header">
+        <h2>Bienvenido, {user.nombre}</h2>
+        <button onClick={handleLogout}>Cerrar sesión</button>
+      </div>
     </div>
   );
 }

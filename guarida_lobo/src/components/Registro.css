@@ -1,8 +1,8 @@
 form {
-  width: 320px;
+  width: 300px;
   margin: 50px auto;
   padding: 25px;
-  background-color: #f0f8ff;
+  background-color: #fafafa;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -12,27 +12,32 @@ form {
 
 form h2 {
   text-align: center;
-  color: #333;
+  margin-bottom: 15px;
 }
 
 input {
   padding: 10px;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
 }
 
 button {
-  background-color: #008b8b;
+  background-color: #78008b;
   color: white;
   border: none;
   padding: 10px;
-  font-weight: bold;
   border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 button:hover {
-  background-color: #006666;
+  background-color: #a040b0;
+}
+
+span {
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
