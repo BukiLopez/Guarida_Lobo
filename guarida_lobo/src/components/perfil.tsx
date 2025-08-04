@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Perfil.css'; // Asegúrate de importar tu CSS
+import './perfil.css';
 
 export default function Perfil() {
   const [user, setUser] = useState<any>(null);

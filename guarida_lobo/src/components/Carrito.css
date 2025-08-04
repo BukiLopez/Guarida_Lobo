@@ -1,15 +1,42 @@
-.comic-panel {
-  padding: 20px;
+.carrito-container {
   width: 90%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #f6f6f6;
+}
+
+.comic-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   border-radius: 10px;
 }
 
 .comic-panel p {
   font-size: 1.1rem;
   color: #333;
+}
+
+.resumen-compra {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.btn-comprar {
+  background-color: #2e8b57;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-comprar:hover {
+  background-color: #1e6b45;
 }

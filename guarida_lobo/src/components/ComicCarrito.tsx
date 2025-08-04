@@ -1,14 +1,14 @@
-import './ComicCard.css';
+import './ComicCarrito.css';
 import type { Comic } from '../types/Comic';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface ComicCardProps {
-  comic: Comic;
+  comic: Comic & { cantidad: number };
   viewMode: 'grid' | 'row';
+  onDelete: () => void;
 }
 
-const ComicCard: React.FC<ComicCardProps> = ({ comic, viewMode }) => {
-
+const ComicCard: React.FC<ComicCardProps> = ({ comic, viewMode, onDelete }) => {
   useEffect(() => {
     fetch(`http://localhost:3001/api/related/${comic.id}`)
       .then((res) => res.json())
@@ -26,8 +26,11 @@ const ComicCard: React.FC<ComicCardProps> = ({ comic, viewMode }) => {
       <div className="comic-main-content">
         <div className="comic-details">
           <h2 className="comic-title">{comic.nombre}</h2>
-          <p className="comic-price">${comic.precio.toFixed(2)}</p>
+          <p className="comic-price">Precio: ${comic.precio.toFixed(2)}</p>
+          <p className="comic-cantidad">Cantidad: {comic.cantidad}</p>
+          <p className="comic-total">Subtotal: ${(comic.precio * comic.cantidad).toFixed(2)}</p>
           <p className="comic-description">{comic.descripcion}</p>
+          <button className="btn-eliminar" onClick={onDelete}>Eliminar</button>
         </div>
       </div>
     </div>
